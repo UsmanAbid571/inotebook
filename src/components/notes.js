@@ -13,17 +13,16 @@ const Notes = (props) => {
   useEffect(() => {
     if(localStorage.getItem('token')){
       
-      getNotes()
+      getNotes();
       
     }
     else{
-    
-      navigate('/login')
+    navigate('/login');
     }
     
    
 
-  }, [])
+  }, [getNotes,navigate])
   const ref = useRef(null)
   const refClose = useRef(null)
   const [note, setNote] = useState({ etitle: "", edescription: "", etag: "default" })
