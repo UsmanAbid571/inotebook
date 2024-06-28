@@ -7,7 +7,7 @@ const Signup = () => {
     const handleSubmit = async (e) => {
       e.preventDefault();
         // Api Call
-        const response = await fetch(`http://localhost:5000/api/auth/createuser`, {
+        const response = await fetch(`https://inotebook-backend-qm5tzyzod-usmans-projects-8fd6f608.vercel.app/api/auth/createuser`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -35,6 +35,7 @@ const Signup = () => {
     return (
         <div className='container col-md-5' style={{ marginTop: "150px",marginBottom: "150px" }}>
             <form onSubmit={handleSubmit}>
+                <h1>Please Signup</h1>
                 <div className="mb-3">
                     <label htmlFor="name" className="form-label">Name</label>
                     <input type="text" name='name' value={credentials.name} required onChange={onChange} className="form-control" id="name" aria-describedby="emailHelp" />

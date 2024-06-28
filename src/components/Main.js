@@ -3,7 +3,7 @@ import './main.css'
 import { Link } from 'react-router-dom'
 const Main = () => {
     return (
-        <div>
+        <div className=''>
 
             <section className="hero">
                 <div className="container">
