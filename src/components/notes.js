@@ -14,15 +14,17 @@ const Notes = (props) => {
     if(localStorage.getItem('token')){
       
       getNotes();
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       
     }
     else{
     navigate('/login');
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }
     
    
 
-  }, [getNotes,navigate])
+  }, [])
   const ref = useRef(null)
   const refClose = useRef(null)
   const [note, setNote] = useState({ etitle: "", edescription: "", etag: "default" })
