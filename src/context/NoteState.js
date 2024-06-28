@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const NoteState = (props) => {
     //Host URL here
-    const host = "https://inotebook-backend-qm5tzyzod-usmans-projects-8fd6f608.vercel.app"
+    const host = "http://localhost:5000"
 
     const notesInitial = []
     const [notes, setNotes] = useState(notesInitial)
