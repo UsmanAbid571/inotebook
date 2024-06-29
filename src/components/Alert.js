@@ -11,6 +11,7 @@ function Alert(props) {
            <strong>{capitalize(props.alert.type)}</strong>: {props.alert.msg} 
         </div>}
         </div>
+        
     )
 }
 

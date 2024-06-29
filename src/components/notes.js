@@ -33,12 +33,14 @@ const Notes = (props) => {
   const updateNote = (currentNote) => {
     ref.current.click();
     setNote({id: currentNote._id,etitle: currentNote.title, edescription: currentNote.description, etag:currentNote.tag})
+   
 }
 
 
   const handleClick = () => {
       editNote(note.id, note.etitle, note.edescription, note.etag)
       refClose.current.click();
+      props.showAlert("Updated Successfully", "success")
   }
 
   const onChange = (e) => {
@@ -47,7 +49,7 @@ const Notes = (props) => {
 
   return (
     <>
-    <Addnote />
+    <Addnote showAlert={props.showAlert} />
       <div>
         <span>
           <button ref={ref} type="button" className="btn " data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -91,7 +93,7 @@ const Notes = (props) => {
       <div className='row my-3 gap-3 '>
         {notes.map((note) => {
           return (
-            <Noteitem updateNote={updateNote} key={note._id} note={note} />
+            <Noteitem updateNote={updateNote} showAlert={props.showAlert} key={note._id} note={note} />
           )
         })}
       </div>

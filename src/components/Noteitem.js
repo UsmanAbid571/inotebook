@@ -3,7 +3,7 @@ import NoteContext from '../context/noteContext'
 import './main.css';
 
 
-function Noteitem({note,updateNote}) {
+function Noteitem({note,updateNote,props}) {
     //const { note, updateNote } = props;
     const context = useContext(NoteContext);
     const { deleteNote } = context;
@@ -20,7 +20,7 @@ function Noteitem({note,updateNote}) {
                     </div>
                     <div className="d-flex align-items-center">
                         <span className="mr-1 mx-2"><i className="fa-solid fa-pen-to-square" onClick={() => { updateNote(note) }}></i></span>
-                        <span className="mr-1"><i className="fa fa-trash remove-note" onClick={() => { deleteNote(note._id) }}></i></span>
+                        <span className="mr-1"><i className="fa fa-trash remove-note" onClick={() => { deleteNote(note._id)}}></i></span>
                         
                         </div>
                     </div>
