@@ -12,12 +12,13 @@ const Notes = (props) => {
   const { notes, getNotes, editNote } = context;
   useEffect(() => {
     if(localStorage.getItem('token')){
-      
+      // eslint-disable-next-line
       getNotes();
       // eslint-disable-next-line react-hooks/exhaustive-deps
       
     }
     else{
+      // eslint-disable-next-line
     navigate('/login');
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }
